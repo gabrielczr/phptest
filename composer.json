@@ -1,0 +1,5 @@
+{
+    "require": {
+        "sirprize/postal-code-validator": "^1.3"
+    }
+}
