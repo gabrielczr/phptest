@@ -96,8 +96,8 @@ if (isset($_POST['submit'])) {
       $results = mysqli_query($connect, $querry);
       $db_record = mysqli_fetch_assoc($results);
       $id = $db_record['id_housing'];
-      $renamed = $_FILES['myFile']['name'] . $id;
-
+      $renamed = $id . $_FILES['myFile']['name'];
+      var_dump($renamed);
       $moved = move_uploaded_file($_FILES['myFile']['tmp_name'], $fullPath);
       echo 'file uploaded successfuly';
     } else {
